@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Iniciando</title>
+</head>
+<body>
+    <header class="cabecalho">
+        <a href="index.html" class="logo">
+            <img src="imagens/nginx-logo.png" alt="Logo NGINX">
+        </a>
+        <nav class="nav">
+            <ul class="menu">
+                <li class="menu-item"><a href="index.html">Introdução</a></li>
+                <li class="menu-item"><a href="Iniciando.html">Iniciando</a></li>
+                <li class="menu-item"><a href="HTTP.html">HTTP</a></li>
+                <li class="menu-item"><a href="HTTPS.html">HTTPS</a></li>
+                <li class="menu-item"><a href="Logs.html">Logs</a></li>
+                <li class="menu-item"><a href="Proxy Pass.html">Proxy Pass</a></li>
+                <li class="menu-item"><a href="Extras.html">Extras</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <section class="texto">
+            <h2 class="topico-titulo">Primeiros passos:</h2>
+            <ul class="primeiros_passos">
+                <li>Instalar o nginx (por padrão ficará localizado no diretório /etc/nginx)</li>
+                <li>Localizar o arquivo padrão do nginx (/etc/nginx/nginx.conf)</li>
+                <li>Abrir todas as portas que serão utilizadas. (neste projeto, foram as portas 80, 81, 443, 8008, 8009 e 9000)</li>
+                <li>Possuir o certificado do site
+                    <ul>
+                        <li>Let's Encrypt</li>
+                        <li>openssl (utilizado)</li>
+                    </ul>
+                </li>
+                <li>Criar uma pasta no diretório /etc/nginx/ onde ficará seus servidores http (a pasta utilizada neste projeto foi a /servers)</li>
+                <li>Criar o arquivo para o seu servidor. Se houver mais de um servidor, pode ser criado um arquivo para cada servidor ou colocar vários servidores no mesmo arquivo (neste projeto foram criados os arquivos: http.conf; https.con; teste.conf)</li>
+                <li>Configurar os servidores</li>
+                <li>Testar a configuração (nginx -t)</li>
+                <li>Iniciar ou Reiniciar o nginx (systemctl start/restart nginx)</li>
+            </ul>
+            
+            <h2 class="topico-titulo">Arquivo padrão do NGINX</h2>
+            <img src="imagens/ngnix-conf.svg" alt="">
+        </section>
+    </main>
+    <footer class="barra">
+        <div class="logos">
+            <img src="imagens/logo-ufs.png" alt="Logo da UFS" class="logo">
+            <img src="imagens/logo-dcomp.svg" alt="Logo do DCOMP" class="logo">
+        </div>
+        <ul class="infos">
+            <li class="nome">Allaphy Lima</li>
+            <li class="nome">Linda Geovana Damasceno de Sá</li>
+            <li class="disciplina">Sistemas Operacionais - <span class="periodo">2022.1</span></li>
+        </ul>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

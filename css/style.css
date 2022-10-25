@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Noto+Sans+Ethiopic:wght@400;900&display=swap');
+
+:root {
+  --verde-claro: #ABD9A9;
+  --verde-escuro: #578D58;
+  --off-white: #F2F2F2;
+  --cinza-bg: #1e222e;
+  --fredoka: 'Fredoka One', cursive;
+  --noto-sans: 'Noto Sans Ethiopic', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border-style: none;
+  outline: 0;
+  text-decoration: none;
+  list-style: none;
+  color: var(--off-white);
+}
+
+body {
+  background-color: var(--cinza-bg);
+  font-family: var(--noto-sans);
+  margin: 2rem;
+  margin-bottom: 6rem;
+}
+
+.cabecalho {
+  display: grid;
+  grid-template-areas:
+    "logo"
+    "menu";
+  grid-template-rows: 3.5rem;
+  grid-template-columns: 10% 80%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 100%;
+  width: fit-content;
+}
+
+.logo img {
+  height: 100%;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-around;
+}
+
+.menu-item {
+  text-transform: uppercase;
+  font-family: var(--fredoka);
+  letter-spacing: .1rem;
+  padding: .5rem;
+  border-radius: 8px;
+  transition-duration: .5s;
+}
+
+.menu-item:hover,
+.item-ativo {
+  background-color: var(--verde-escuro);
+}
+
+.main {
+  padding: 3rem 10rem;
+  text-align: justify;
+}
+
+.topico-titulo {
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: .15rem;
+  text-align: end;
+  margin: 1rem 0;
+}
+
+.conteudo {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  font-size: 1.3rem;
+  margin-bottom: .5rem;
+}
+.primeiros_passos {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 1.2rem;
+  justify-content: center;
+}
+
+.primeiros_passos ul {
+  padding-left: 2rem;
+}
+.primeiros_passos ul li {
+  list-style-type: circle;
+}
+
+.primeiros_passos li {
+  display: list-item;
+  list-style-type: disc;
+}
+
+.referencias {
+  margin-top: 3rem;
+  padding: 2rem;
+  border-top: 1px solid var(--off-white);
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.barra {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5rem 2rem;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 6rem;
+  background-color: var(--verde-escuro);
+}
+
+.logos {
+  display: flex;
+  height: 100%;
+  gap: 1rem;
+}
+
+.infos {
+  text-align: right;
+}
+
+.nome {
+  cursor: default;
+}
+
+.disciplina,
+.periodo {
+  letter-spacing: .1rem;
+  font-style: italic;
+}

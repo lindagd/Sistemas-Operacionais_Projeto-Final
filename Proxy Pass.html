@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Proxy Pass</title>
+</head>
+<body>
+    <header class="cabecalho">
+        <a href="index.html" class="logo">
+            <img src="imagens/nginx-logo.png" alt="Logo NGINX">
+        </a>
+        <nav class="nav">
+            <ul class="menu">
+                <li class="menu-item"><a href="index.html">Introdução</a></li>
+                <li class="menu-item"><a href="Iniciando.html">Iniciando</a></li>
+                <li class="menu-item"><a href="HTTP.html">HTTP</a></li>
+                <li class="menu-item"><a href="HTTPS.html">HTTPS</a></li>
+                <li class="menu-item"><a href="Logs.html">Logs</a></li>
+                <li class="menu-item"><a href="Proxy Pass.html">Proxy Pass</a></li>
+                <li class="menu-item"><a href="Extras.html">Extras</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <section class="texto">
+            <h2 class="topico-titulo">Arquivo: /etc/nginx/servers/teste.conf</h2>
+            <img src="imagens/07.svg" alt="">
+            <img src="imagens/08.svg" alt="">
+            <p class="texto">
+                Neste projeto, o SELinux não estava permitindo o Nginx redirecionar o proxy para o próprio servidor, portanto o seguinte comando foi necessário para permitir:
+                <br><strong>/usr/sbin/setsebool -P httpd_can_network_connect true</strong>
+            </p>
+    </main>
+    <footer class="barra">
+        <div class="logos">
+            <img src="imagens/logo-ufs.png" alt="Logo da UFS" class="logo">
+            <img src="imagens/logo-dcomp.svg" alt="Logo do DCOMP" class="logo">
+        </div>
+        <ul class="infos">
+            <li class="nome">Allaphy Lima</li>
+            <li class="nome">Linda Geovana Damasceno de Sá</li>
+            <li class="disciplina">Sistemas Operacionais - <span class="periodo">2022.1</span></li>
+        </ul>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

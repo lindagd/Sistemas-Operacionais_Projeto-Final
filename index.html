@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Introdução</title>
+</head>
+<body>
+    <header class="cabecalho">
+        <a href="index.html" class="logo">
+            <img src="imagens/nginx-logo.png" alt="Logo NGINX">
+        </a>
+        <nav class="nav">
+            <ul class="menu">
+                <li class="menu-item"><a href="index.html">Introdução</a></li>
+                <li class="menu-item"><a href="Iniciando.html">Iniciando</a></li>
+                <li class="menu-item"><a href="HTTP.html">HTTP</a></li>
+                <li class="menu-item"><a href="HTTPS.html">HTTPS</a></li>
+                <li class="menu-item"><a href="Logs.html">Logs</a></li>
+                <li class="menu-item"><a href="Proxy Pass.html">Proxy Pass</a></li>
+                <li class="menu-item"><a href="Extras.html">Extras</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <section class="texto">
+            <h2 class="topico-titulo">Os primeiros servidores web</h2>
+            <div class="conteudo">
+                <img src="imagens/requisicoes_processbased.svg" alt="Ilustração do problema C10K">
+                <p class="texto">
+                    Um servidor web nada mais é que um software que entrega a página solicitada e intermedia a comunicação entre os arquivos hospedados e o usuário. O navegador faz uma requisição via protocolo HTTP de uma página hospedada em um servidor web. Esses softwares são rodados em máquinas que chamamos de servidores.
+                    <br>Os primeiros servidores web surgiram no início da década de 90 e, com o avanço da internet, problemas referentes à experiência do usuário pelo atraso de conexões Cliente-Servidor começaram a surgir.
+                </p>
+            </div>    
+            <div class="conteudo">
+                <img src="imagens/problemac10k.svg" alt="">
+                <p class="texto">
+                    Assim nasceu o problema C10K apresentado pela primeira vez em 1999 pelo engenheiro Dan Kergel em seu site pessoal, onde reportava que: “já passou da hora de servidores web conseguirem administrar dez mil clientes simultaneamente. Afinal, a web é um grande espaço agora” e prosseguiu com diferentes estratégias para lidar e resolver o problema.
+                </p>
+            </div>
+            <h2 class="topico-titulo">NGINX: conceitos básicos</h2>
+            <div class="conteudo">
+                <img src="imagens/requisicoes_nginx.svg" alt="">
+                <p class="texto">
+                    O nginx é um servidor web, open-source, que foi criado com o intuito de resolver o problema C10K. Para isso, utiliza um modelo assíncrono e baseado em eventos (event-driven) para o gerenciamento de conexões.
+                    <br>Uma boa parte dos servidores web têm seu modelo de conexão baseado em processos (process-based), significando que cada requisição consecutiva espera/é bloqueada até que sua antecessora seja finalizada para então ser executada.
+
+                </p>
+            </div>
+            <div class="conteudo">
+                <img src="imagens/master_process.svg" alt="">
+                <p class="texto">
+                    Ao iniciar uma conexão, o nginx cria um primeiro processo denominado Master Process, que cria outros processos denominados Worker Processes.
+               
+                </p>
+            </div>
+            <div class="conteudo">
+                <img src="imagens/proxy_reverso.svg" alt="">
+                <p class="texto">
+                    O nginx, além de ser um servidor web completo, também pode ser usado de diferentes maneiras, como proxy reverso, load balancer, ADC, entre outros…
+                    <br>
+                    Proxy reverso recebe as requisições de vários clientes e organiza para onde cada requisição vai, encaminhando cada requisição para seu servidor correspondente.
+                </p>
+            </div>
+            <div class="conteudo">
+                <img src="imagens/load_balance.svg" alt="">
+                <p class="texto">
+                    O load balancer age fazendo um balanceamento das requisições entregues a servidores de uma rede para que o processamento seja igualmente distribuído. 
+                </p>
+            </div>
+        </section>
+
+        <section class="referencias">
+            <h2>Referências</h2>
+            <a href="https://nginx.org/en/docs/beginners_guide.html" class="ref">1. https://nginx.org/en/docs/beginners_guide.html</a>
+            <a href="https://www.nginx.com/resources/glossary/load-balancing/" class="ref">2. https://www.nginx.com/resources/glossary/load-balancing/</a>
+            <a href="https://nginx.org/en/docs/http/load_balancing.html" class="ref">3. https://nginx.org/en/docs/http/load_balancing.html</a>
+            <a href="https://www.freecodecamp.org/news/the-nginx-handbook/#introduction-to-nginx" class="ref">4. https://www.freecodecamp.org/news/the-nginx-handbook/#introduction-to-nginx</a>
+            <a href="https://nginx.org/en/docs/http/load_balancing.html" class="ref">5. https://nginx.org/en/docs/http/load_balancing.html</a>
+            <a href="http://www.kegel.com/c10k.html" class="ref">6. http://www.kegel.com/c10k.html</a>
+        </section>
+    </main>
+
+    <footer class="barra">
+        <div class="logos">
+            <img src="imagens/logo-ufs.png" alt="Logo da UFS" class="logo">
+            <img src="imagens/logo-dcomp.svg" alt="Logo do DCOMP" class="logo">
+        </div>
+        <ul class="infos">
+            <li class="nome">Allaphy Lima</li>
+            <li class="nome">Linda Geovana Damasceno de Sá</li>
+            <li class="disciplina">Sistemas Operacionais - <span class="periodo">2022.1</span></li>
+        </ul>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
