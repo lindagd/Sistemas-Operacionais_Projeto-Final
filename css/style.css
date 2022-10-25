@@ -49,6 +49,7 @@ body {
 
 .menu {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
 }
 
@@ -86,6 +87,7 @@ body {
   font-size: 1.3rem;
   margin-bottom: .5rem;
 }
+
 .primeiros_passos {
   display: flex;
   flex-direction: column;
@@ -146,4 +148,22 @@ body {
 .periodo {
   letter-spacing: .1rem;
   font-style: italic;
+}
+
+@media screen and (max-width: 1024px) {
+  .main {
+    padding: 3rem 1rem;
+  }
+  .conteudo {
+    flex-direction: column;
+  }
+  .barra {
+    font-size: .8rem;
+  }
+  .referencias {
+    font-size: .8rem;
+  }
+  img.logo {
+    display: none;
+  }
 }
