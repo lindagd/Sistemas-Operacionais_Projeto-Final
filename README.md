@@ -3,6 +3,8 @@
 Este é um site com apresentações e exemplificações do servidor web nginx e suas principais ferramentas.
 A página e todo o conteúdo foram feitos em conjunto com Allaphy Lima para o projeto final da disciplina de Sistemas Operacionais (turma 01 - 2022.1).
 
+Todas as referências para a introdução do site estão no fim da página inicial.
+
 ## [Veja o site completo](https://lindagd.github.io/Sistemas-Operacionais_Projeto-Final/)
 [Link](https://lindagd.github.io/Sistemas-Operacionais_Projeto-Final/) :coffee:
 
